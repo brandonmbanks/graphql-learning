@@ -1,13 +1,9 @@
  version: '2'
  services:
-   db:
-     image: postgres
-   web:
-     build: .
-     command: python3 manage.py runserver 0.0.0.0:5000
-     volumes:
-       - .:/code
-     ports:
-       - "5000:5000"
-     depends_on:
-       - db
+    web:
+      build: .
+      command: python3 manage.py runserver 0.0.0.0:5000
+      volumes:
+        - .:/code
+      ports:
+        - "5000:5000"
