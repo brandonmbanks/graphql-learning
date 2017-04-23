@@ -3,11 +3,6 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Song(models.Model):
-
-    class Meta:
-        app_name = 'store'
-        db_table = 'songs'
-
     title = models.CharField(max_length=100)
     artist_id = models.CharField(max_length=50)
     release_date = models.DateField()
